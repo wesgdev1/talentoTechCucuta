@@ -1,0 +1,15 @@
+.contenedor {
+  max-width: 800px;
+  margin: 0 auto;
+ 
+  font-family: Arial, sans-serif;
+
+}
+
+.listaTareas {
+  margin-top: 20px;
+  display: flex;         /* Mostrar en fila */
+  flex-wrap: wrap;       /* Permitir saltos de línea */
+  gap: 20px;             /* Espacio entre tarjetas */
+  justify-content: center; /* Centrar tarjetas */
+}

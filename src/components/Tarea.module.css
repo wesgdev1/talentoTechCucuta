@@ -1,0 +1,38 @@
+.tarea {
+  border: 1px solid #ddd;
+  padding: 10px;
+  width: 200px;
+  min-height: 120px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.corazon {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+
+.botones {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.boton {
+ 
+  padding: 5px;
+}
+
+.entrada {
+  width: 150px;
+  padding: 5px;
+  margin-top: 5px;
+}

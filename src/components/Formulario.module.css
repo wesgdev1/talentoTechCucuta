@@ -1,0 +1,17 @@
+.formulario {
+  margin-bottom: 20px;
+}
+
+.entrada {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.boton {
+  padding: 8px 15px;
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
