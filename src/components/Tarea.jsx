@@ -9,7 +9,7 @@ function Tarea({
   cambiarLike,
 }) {
   const [modoEditar, setModoEditar] = useState(false);
-  const [nuevoTexto, setNuevoTexto] = useState(tarea.texto);
+  const [nuevoTexto, setNuevoTexto] = useState(tarea.description || "");
 
   const guardarCambio = () => {
     if (nuevoTexto.trim() === "") return;
@@ -19,8 +19,8 @@ function Tarea({
 
   return (
     <div className={estilos.tarea}>
-      <span className={estilos.corazon} onClick={() => cambiarLike(tarea.id)}>
-        {tarea.like ? "❤️" : "🤍"}
+      <span className={estilos.corazon} onClick={() => cambiarLike(tarea)}>
+        {tarea.completed ? "❤️" : "🤍"}
       </span>
 
       {modoEditar ? (
@@ -36,7 +36,8 @@ function Tarea({
         </>
       ) : (
         <>
-          <p className={estilos.texto}>{tarea.texto}</p>
+          <p className={estilos.texto}>{tarea.title}</p>
+          <p className={estilos.texto}>{tarea.description}</p>
           <div className={estilos.botones}>
             <button
               className={estilos.boton}
