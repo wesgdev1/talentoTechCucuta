@@ -8,7 +8,7 @@ import { createTask, deleteTask, updateTask } from "./api/task";
 
 function App() {
   const { data, loading, error, getTareas } = useTareas();
-  const [tareas, setTareas] = useState([]);
+  // const [tareas, setTareas] = useState([]);
   const [modal, setModal] = useState(null);
 
   const agregarTarea = async (texto, title) => {
@@ -19,7 +19,7 @@ function App() {
       title,
       description: texto,
       userId: 1,
-      categoryId: 1,
+      categoryId: 3,
     };
 
     const response = await createTask(nuevaTarea);
@@ -64,6 +64,8 @@ function App() {
       console.error("Error al cambiar like:", response.error);
     }
   };
+
+  //hacer fetch para obetener tareas
 
   return (
     <div className={estilos.contenedor}>

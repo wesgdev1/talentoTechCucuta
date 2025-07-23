@@ -4,7 +4,7 @@ export const getTasks = async () => {
   try {
     // Hacemos la petición GET a la URL del backend
     const response = await fetch(
-      "https://repoeducativotalentotech.onrender.com/api/tasks",
+      "https://g075backendapi.onrender.com/api/tasks",
       {
         method: "GET",
         headers: {
@@ -20,7 +20,7 @@ export const getTasks = async () => {
       throw new Error("No se pudo obtener la información");
     }
 
-    // Convertimos la respuesta a formato JSON
+    // Convertimos la respuesta a un Objeto
     const result = await response.json();
 
     // Devolvemos los datos en una estructura { data: ... }
@@ -34,7 +34,7 @@ export const getTasks = async () => {
 export const createTask = async (task) => {
   try {
     const response = await fetch(
-      "https://repoeducativotalentotech.onrender.com/api/tasks",
+      "https://g075backendapi.onrender.com/api/tasks",
       {
         method: "POST",
         headers: {
@@ -58,7 +58,7 @@ export const createTask = async (task) => {
 export const getTask = async (id) => {
   try {
     const response = await fetch(
-      `https://repoeducativotalentotech.onrender.com/api/tasks/${id}`,
+      `https://g075backendapi.onrender.com/api/tasks/${id}`,
       {
         method: "GET",
         headers: {
@@ -81,7 +81,7 @@ export const getTask = async (id) => {
 export const deleteTask = async (id) => {
   try {
     const response = await fetch(
-      `https://repoeducativotalentotech.onrender.com/api/tasks/${id}`,
+      `https://g075backendapi.onrender.com/api/tasks/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -103,7 +103,7 @@ export const deleteTask = async (id) => {
 export const updateTask = async (id, task) => {
   try {
     const response = await fetch(
-      `https://repoeducativotalentotech.onrender.com/api/tasks/${id}`,
+      `https://g075backendapi.onrender.com/api/tasks/${id}`,
       {
         method: "PUT",
         headers: {

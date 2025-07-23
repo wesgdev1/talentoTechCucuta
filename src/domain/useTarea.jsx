@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getTask, getTasks } from "../api/task";
+import { createTask, getTask, getTasks } from "../api/task";
 
 export const useTarea = (id) => {
   const [data, setData] = useState();
@@ -27,3 +27,25 @@ export const useTarea = (id) => {
 
   return { data, loading, error, getTarea };
 };
+
+// export const useCreateTarea = () => {
+//   const [loading, setLoading] = useState(false);
+//   const [error, setError] = useState("");
+
+//   const createTarea = async (tarea) => {
+//     setLoading(true);
+//     setError("");
+
+//     try {
+//       const response = await createTask(tarea);
+//       return response.data;
+//     } catch (error) {
+//       setError(error);
+//       throw error;
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
+
+//   return { createTarea, loading, error };
+// };
